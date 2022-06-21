@@ -1,0 +1,202 @@
+/* Fuente Personalizada */
+@font-face {
+  font-family: "Tangerine";
+  src: url(../fount/Tangerine_Bold.ttf);
+}
+
+/* estilo general */
+
+* {
+  box-sizing: border-box;
+}
+
+
+.header {
+  /* background: #FFD65E; */
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 0;
+
+}
+
+.menu {
+  /* background: #FB3200; */
+  display: flex;
+  flex-flow: row nowrap;
+  height: 7rem;
+  align-items: center;
+}
+
+.logo {
+  /* background: #4300FF; */
+  display: flex;
+  flex-flow: row nowrap;
+  height: 7rem;
+  align-items: center;
+
+}
+
+.nav {
+  /* background: #A63DD9; */
+  flex: 1.1 auto;
+  height: 2rem;
+}
+
+.form {
+  width: 30%;
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-flow: row nowrap;
+
+  margin-right: 0.5rem;
+}
+
+.form input {
+  width: 20rem;
+  height: 1rem;
+  margin: 5px;
+
+  border-radius: 3rem;
+  background: rgba(129, 129, 129, 0.15);
+}
+
+.form button {
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border: none;
+  /* background: rgb(100, 200, 255); */
+  cursor: pointer;
+
+}
+
+img[alt="buscar"] {
+  width: 1.5em;
+  height: 1.5rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+/* img[alt="logo"] {
+  width: 1.5em;
+  height: auto;
+  
+  padding: 0;
+  margin: 0.5rem;
+}
+
+img[alt="logo"] {
+  width: 1.5em;
+  height: auto;
+  
+  padding: 0;
+  margin: 0.5rem;
+} */
+
+
+
+.icons {
+  /* background: #0BFF01; */
+  display: flex;
+  flex-flow: row nowrap;
+  height: 7rem;
+  align-items: center;
+  margin: 0.5rem;
+}
+
+h1 {
+  font-family: Tangerine, sans-serif;
+  padding: 2rem;
+}
+
+body {
+  margin: 0px;
+}
+
+body>* {
+  margin: 2.1rem 0rem;
+}
+
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.img {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 15px;
+}
+
+.articles-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.articles-section>article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0rem 2rem;
+}
+
+.articles-section>article>div {
+  padding: 1rem;
+}
+
+.button-yellow {
+  background-color: #fff9be;
+  padding: 0.8rem 1.5rem;
+  border-radius: 2rem;
+}
+
+.catalog {
+  height: 20rem;
+  width: 100vw;
+  background: url(../image/linus-mimietz-75rvASm_uKY-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 0px -189rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 1.5rem;
+  position: relative;
+}
+
+.colection-text {
+  color: #fff;
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+}
+
+.most-solds {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .articles-section {
+    flex-direction: column;
+  }
+
+  .articles-section>article {
+    flex-direction: column;
+    margin: 2rem 0rem;
+  }
+}
