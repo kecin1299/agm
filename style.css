@@ -243,11 +243,99 @@ html > body > .slider{
 
 /* body style end */
 
+/* footer style */
+
+.piedepagina{
+    width: 100%;
+    
+
+}
+.piedepagina .primer{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+    
+
+}
+.piedepagina .primer .box figure{
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.piedepagina .primer .box h2{
+    color: black;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.piedepagina .primer .RedesSociales a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: black;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    transition: all 300ms ease;
+
+}
+.piedepagina .primer .Correo a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: black;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    transition: all 300ms ease;
+}
+.piedepagina .primer .ubicacion a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: black;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    transition: all 300ms ease;
+}
+.piedepagina .primer .RedesSociales a:hover{
+    color: aqua;
+}
+.piedepagina .primer .Correo a:hover{
+    color: aqua;
+}
+.piedepagina .primer .ubicacion a:hover{
+    color: aqua;
+}
+.piedepagina .segundo{
+    padding: 15px 10px;
+    text-align: center;
+    color: black;
+}
+.piedepagina .segundo small{
+    font-size: 15px;
+
+}
 
 
-
+/*   */
 
 /* responsive index */
+
+/* article responsive */
 
 @media (max-width: 600px) {
     .articles-section {
@@ -259,3 +347,19 @@ html > body > .slider{
         margin: 2rem 0rem;
     }
 }
+
+/* footer responsive */
+
+@media screen and (max-width:800px){
+    .piedepagina .primer{
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+        
+    
+    } 
+}
+
+/* header responsive */
+
