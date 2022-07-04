@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+
+    
+</head>
+
+<body>
+
+    <div id="map">
+
+    </div>
+    <div class="div_centrado fondo_deg">
+
+        <input type="text" id="latitud" value="">
+        <input type="text" id="long" value="">
+
+        <center>
+            <button id="btn_ubica" onclick="javascript: cargar_locacion_manual()" name="btn_ubica">Adquirir ubicación <br><img src="" alt=""></button>
+
+        </center>
+        <div id="mapa" class="borde" style="width: 100%; height: 700px;">
+        </div>
+    </div>
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIr8AuKS-VQ2WkzIq_InzQVilSwbXq1Yo&callback=cargar_locacion">
+    </script>
+
+    <script>
+
+      function cargar_locacion(){
+
+            if(document.getElementById('latitud').value =="" && 
+            document.getElementById('long').value==""){
+                navigator.geolocation.getCurrentPosition(initMap);
+                var latitude = position.coords.latitude;
+                var longitude = position.coords.longitude;
+
+            }
+            else{
+                var latitude = parseFloat(document.getElementById("mapa"), {center:
+                {lat: latitude, lng: longitude}, zoom: 15});
+            }
+       
+            navigator.geolocation.getCurrentPosition(initMap);
+
+
+        var place = new google.maps.LatLng(latitude, longitude);
+        var marker = new google.maps.Marker({
+            position: place,
+            tittle: 'Ubicación',
+            map: map
+        });
+        var popup = new google.maps.InfoWindow({
+            content: 'Joyería'
+        });
+        popup.open(map, marker);
+
+        document.getElementById('latitud').value=latitude;
+        document.getElementById('long').value=longitude;
+      }
+      function initMap(position){
+
+        var latitude = position.coords.latitude;
+        var longitude = position.coords.longitude;
+
+        var map = new google.maps.Map(document.getElementById('mapa'), {
+            center: {lat: latitude, lng: longitude},
+            zoom: 15
+        });
+
+        var place = new google.maps.LatLng(latitude, longitude);
+        var marker = new google.maps.Marker({
+            position: place,
+            tittle: "Mi ubicación",
+            map: map,
+        });
+        var popup = new google.maps.InfoWindow({
+            content: 'Ubicación'
+        });
+        popup.open (map, marker);
+        
+        document.getElementById('latitud').value=latitude;
+        document.getElementById('long').value=longitude;
+      }
+
+      function cargar_locacion_manual(){
+        cargar_locacion();
+    
+      }
+
+    </script>
+
+
+</body>
+</html>
