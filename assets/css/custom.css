@@ -6,14 +6,20 @@ body {
 }
 h1 {
     text-align: center;
+    font-family: Cagliostro;
+
 }
 h2 {
+    text-align: center;
     font-size: 3rem;
+    font-family: Cagliostro;
 }
 h4 {
     font-size: 16px;
     font-weight: 700;
+    font-family: Cagliostro;
 }
+
 header {
     padding: 20px 0 0 0;
     background: white;
@@ -48,6 +54,40 @@ ul {
     align-items: center;
     padding: 1.5rem;
     position: relative;
+    font-family: Cagliostro;
+    text-align: center;
+    
+}
+#hero2{
+    background-image:url(../image/paul-cuoco-CO2vOhPqlrM-unsplash.jpg);
+    width: 130rem;
+    height: 40rem;
+    background-size: cover;
+    background-position: 1rem;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 1.5rem;
+    position: relative;
+    font-family: Cagliostro;
+    text-align: center;
+}
+#hero3{
+    background-image:url(../image/poul-edward-erni-w8RSCxAZA8U-unsplash.jpg);
+    width: 130rem;
+    height: 40rem;
+    background-size: cover;
+    background-position: 1rem;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 1.5rem;
+    position: relative;
+    font-family: Cagliostro;
+    text-align: center;
+
 }
 #encabezado {
     margin: 30px 0;
