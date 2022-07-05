@@ -34,27 +34,39 @@
                 </a>
             </div>
 
-            <form action="" class="search-form">
-                <input type="search" name="" placeholder="buscar" id="search-box">
-            </form>
+            <nav class="navbar">
+                <a href="#">Joyas</a>
+                <a href="#">Encanto</a>
+                <a href="#">Compromiso</a>
+                <a href="#">Joyeria infantil</a>
+                <a href="#">Coleccion</a>
+                
+            </nav>
 
             <div class="icons">
+                <div id="search-btn">
+                    <img src="./assets/icon/buscar.png" alt="">
+                </div>
+                <div id="user-btn">
+                    <img src="./assets/icon/usuario.png" alt="">
+                </div>
 
-                <label for="search-box" class="search-bar">
-                    <img src="./assets/icon/buscar.png" alt="buscar">
-                </label>
-
-                <a href="#">
-                    <img src="./assets/icon/usuario.png" alt="usuario">
-                </a>
-                <h2>
-                    <a href="./login.html" target="_blank">Login</a>
-                </h2>    
+                <a href="./login.html">Acceder</a>
                 
+                <div id="shopping-car-btn">
+                    <a href="./shooppingCart.html">
+                        <img src="./assets/icon/carro.png" alt="">
+                    </a>
+                </div>
 
-                <a href="./shooppingCart.html" target="_blank">
-                    <img src="./assets/icon/carro.png" alt="carro">
-                </a>
+                <div id="menu-btn">
+                    <img src="./assets/icon/menu.png" alt="">
+                </div>
+            </div>
+
+            <div class="search-form">
+                <input type="search" id="search-box" placeholder="Joyas, Relojes, Anillos...">
+                <label for="search-box"></label>
             </div>
 
         </div>
@@ -225,7 +237,7 @@
 
 
     </footer>
-
+    <script src="./js/script.js"></script>
     <script>
         $(".slider").owlCarousel({
             loop: true,
@@ -234,6 +246,7 @@
             autoplayHoverPause: true
         });
     </script>
+    
 </body>
 
 </html>
