@@ -182,6 +182,7 @@ button {
     background-color: #fff9be;
     padding: 0.8rem 1.5rem;
     border-radius: 2rem;
+    margin-top: 1rem;
 }
 
 .catalog {
@@ -213,6 +214,8 @@ button {
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 /* carrusel */
@@ -340,13 +343,13 @@ html > body > .slider{
     transition: all 300ms ease;
 }
 .piedepagina .primer .RedesSociales a:hover{
-    color: aqua;
+    color: gray;
 }
 .piedepagina .primer .Correo a:hover{
-    color: aqua;
+    color: gray;
 }
 .piedepagina .primer .ubicacion a:hover{
-    color: aqua;
+    color: gray;
 }
 .piedepagina .segundo{
     padding: 15px 10px;
@@ -451,4 +454,28 @@ html > body > .slider{
         font-size: 50%;
     }
 
+}
+.video-contenedor{
+    background-color: rgba(255, 234, 167,1.0);
+    padding: 10rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.mapa-mostrar{
+    padding: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 0rem;
+    
+}
+.ub{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
