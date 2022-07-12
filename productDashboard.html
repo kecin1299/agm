@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/assets/css/pd.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+
+    
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"> <h2>Joyería</h2> 
+          <h2>Golden Ring</h2>  </a>
+          
+          
+      
+          
+        </div>
+      </nav>
+    <div class="container">
+        
+
+        
+
+            <h1>Administrador de productos</h1>
+
+            <div class="date">
+                <input type="date">
+            </div>
+
+            
+            <div class="recent-orders">
+
+        
+                
+                
+                <div class="container">
+                    <div id="App" class="row pt-7">
+    
+                        
+                        <div class="col-md-4">
+                            <div class="card mt-5">
+                                <div class="card-header">
+                                    <h4>Agregar producto</h4>
+                                </div>
+                                <form id="product-form" class="card-body ">
+                                    <div class="form-group">
+                                        <input type="text" id="name" placeholder="Nombre del producto" class="form-control mb-3">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="number" step="0.01" id="price" placeholder="Precio" class="form-control mb-3">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" id="category" placeholder="Categoria" class="form-control mb-3">
+                                    </div>
+                                    <input type="submit" value="Guardar" class="btn btn-warning btn-sm" >
+                                    <a href="/dashboard.html" class="btn btn-outline-secondary btn-sm">Volver</a>
+                                </form>
+
+                                
+                            </div>
+                            
+                            
+                        </div>
+                        
+                        <div id="product-list" class="col-md-8 mt-5"></div>
+                        
+                    </div>
+
+            </div>
+
+            <table class="table table-hover mt-5">
+                <thead>
+                  <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Categoría</th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                  <tr class="table-light">
+                    <th scope="row">Joya de compromiso</th>
+                    <td>$110</td>
+                    <td>Compromiso</td>
+                    
+                  </tr>
+                  <tbody>
+                  
+                    <tr class="table-light">
+                      <th scope="row">Collar de oro</th>
+                      <td>$85</td>
+                      <td>Joyas</td>
+                      
+                    </tr>
+                    <tbody>
+                  
+                        <tr class="table-light">
+                          <th scope="row">Reloj Fossil</th>
+                          <td>$150</td>
+                          <td>Relojes</td>
+                          
+                        </tr>
+                        <tbody>
+                  
+                            <tr class="table-light">
+                              <th scope="row">Reloj Casio</th>
+                              <td>$100</td>
+                              <td>Relojes</td>
+                              
+                            </tr>
+                            <tbody>
+                  
+                                <tr class="table-light">
+                                  <th scope="row">Anillo de oro rosa</th>
+                                  <td>$120</td>
+                                  <td>Joyas</td>
+                                  
+                                </tr>
+                                <tbody>
+                  
+                                    <tr class="table-light">
+                                      <th scope="row">Joya de graduación</th>
+                                      <td>$50</td>
+                                      <td>Joyas</td>
+                                      
+                                    </tr>
+                                    <tbody>
+                  
+                                        <tr class="table-light">
+                                          <th scope="row">Anillos de compromiso</th>
+                                          <td>$90</td>
+                                          <td>Compromiso</td>
+                                          
+                                        </tr>
+                </tbody>
+              </table>
+        
+
+        
+    </div>
+    <script src="/dashboard.js"></script>
+    <script src="/js/pd.js"></script>
+
+</body>
+</html>
