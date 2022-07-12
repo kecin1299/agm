@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Cagliostro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cagliostro&family=Tangerine:wght@700&display=swap');
+
+
+h2{
+    
+font-family: 'Tangerine', cursive;  
+    font-size: small; 
+}
+
+h1{
+
+    font-family: 'Cagliostro', sans-serif;
+    
+}
+h4{
+
+    font-family: 'Cagliostro', sans-serif;
+    font-size: x-small;
+}
+
+td, th{
+    font-family: 'Cagliostro', sans-serif;
+
+}
