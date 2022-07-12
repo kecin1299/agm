@@ -1,6 +1,6 @@
 // Variables
 const carrito = document.querySelector('#carrito');
-const listaCursos = document.querySelector('#lista-cursos');
+const listaJoyas = document.querySelector('#lista-joyas');
 const contenedorCarrito = document.querySelector('#lista-carrito tbody');
 const vaciarCarritoBtn = document.querySelector('#vaciar-carrito'); 
 let articulosCarrito = [];
@@ -10,10 +10,10 @@ cargarEventListeners();
 
 function cargarEventListeners() {
      // Dispara cuando se presiona "Agregar Carrito"
-     listaCursos.addEventListener('click', agregarCurso);
+     listaJoyas.addEventListener('click', agregarJoyas);
 
      // Cuando se elimina un curso del carrito
-     carrito.addEventListener('click', eliminarCurso);
+     carrito.addEventListener('click', eliminarJoya);
 
      // Al Vaciar el carrito
      vaciarCarritoBtn.addEventListener('click', vaciarCarrito);
@@ -22,40 +22,40 @@ function cargarEventListeners() {
 
 
 // Funciones
-// Función que añade el curso al carrito
-function agregarCurso(e) {
+// Función que añade la joya al carrito
+function agregarJoyas(e) {
     e.preventDefault();
     // Delegation para agregar-carrito
     if(e.target.classList.contains('agregar-carrito')) {
-         const curso = e.target.parentElement.parentElement;
-         // Enviamos el curso seleccionado para tomar sus datos
-         leerDatosCurso(curso);
+         const joya = e.target.parentElement.parentElement;
+         // Enviamos la joya seleccionado para tomar sus datos
+         leerDatosJoya(joya);
     }
 }
 
-// Lee los datos del curso
-function leerDatosCurso(curso) {
-    const infoCurso = {
-         imagen: curso.querySelector('img').src,
-         titulo: curso.querySelector('h4').textContent,
-         precio: curso.querySelector('.precio span').textContent,
-         id: curso.querySelector('a').getAttribute('data-id'), 
+// Lee los datos dla joya
+function leerDatosJoya(joya) {
+    const infojoya = {
+         imagen: joya.querySelector('img').src,
+         titulo: joya.querySelector('h4').textContent,
+         precio: joya.querySelector('.precio span').textContent,
+         id: joya.querySelector('a').getAttribute('data-id'), 
          cantidad: 1
     }
 
 
-    if( articulosCarrito.some( curso => curso.id === infoCurso.id ) ) { 
-         const cursos = articulosCarrito.map( curso => {
-              if( curso.id === infoCurso.id ) {
-                   curso.cantidad++;
-                    return curso;
+    if( articulosCarrito.some( joya => joya.id === infojoya.id ) ) { 
+         const joyas = articulosCarrito.map( joya => {
+              if( joya.id === infojoya.id ) {
+               joya.cantidad++;
+                    return joya;
                } else {
-                    return curso;
+                    return joya;
             }
          })
-         articulosCarrito = [...cursos];
+         articulosCarrito = [...joyas];
     }  else {
-         articulosCarrito = [...articulosCarrito, infoCurso];
+         articulosCarrito = [...articulosCarrito, infojoya];
     }
 
     // console.log(articulosCarrito)
@@ -66,37 +66,37 @@ function leerDatosCurso(curso) {
     carritoHTML();
 }
 
-// Elimina el curso del carrito en el DOM
-function eliminarCurso(e) {
+// Elimina la joya del carrito en el DOM
+function eliminarJoya(e) {
     e.preventDefault();
-    if(e.target.classList.contains('borrar-curso') ) {
+    if(e.target.classList.contains('borrar-joya') ) {
          // e.target.parentElement.parentElement.remove();
-         const cursoId = e.target.getAttribute('data-id')
+         const joyaId = e.target.getAttribute('data-id')
          
          // Eliminar del arreglo del carrito
-         articulosCarrito = articulosCarrito.filter(curso => curso.id !== cursoId);
+         articulosCarrito = articulosCarrito.filter(joya => joya.id !== joyaId);
 
          carritoHTML();
     }
 }
 
 
-// Muestra el curso seleccionado en el Carrito
+// Muestra la joya seleccionado en el Carrito
 function carritoHTML() {
 
     vaciarCarrito();
 
-    articulosCarrito.forEach(curso => {
+    articulosCarrito.forEach(joya => {
          const row = document.createElement('tr');
          row.innerHTML = `
               <td>  
-                   <img src="${curso.imagen}" width=100>
+                   <img src="${joya.imagen}" width=100>
               </td>
-              <td>${curso.titulo}</td>
-              <td>${curso.precio}</td>
-              <td>${curso.cantidad} </td>
+              <td>${joya.titulo}</td>
+              <td>${joya.precio}</td>
+              <td>${joya.cantidad} </td>
               <td>
-                   <a href="#" class="borrar-curso" data-id="${curso.id}">X</a>
+                   <a href="#" class="borrar-joya" data-id="${joya.id}">X</a>
               </td>
          `;
          contenedorCarrito.appendChild(row);
@@ -104,7 +104,7 @@ function carritoHTML() {
 
 }
 
-// Elimina los cursos del carrito en el DOM
+// Elimina las joyas del carrito en el DOM
 function vaciarCarrito() {
     // forma lenta
     // contenedorCarrito.innerHTML = '';
